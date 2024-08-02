@@ -35,8 +35,8 @@ public class Main{
         //Creating a label for gender are with radion JButtons
         JLabel genderLabel = new JLabel("Gender"); //we will create the gender label
         JPanel genderPanel = new JPanel (new FlowLayout()); //thid panel will create a flowlayout to hold radio buttons
-        JRadioButton maleButton = new JRadioButton("MALE"); //creating a radio button for the male gender
-        JRadioButton femaleButton = new JRadioButton("Female"); //creatinga radio buton for the female gender
+        JRadioButton femaleButton = new JRadioButton("FEMALE"); //creating a radio button for the male gender
+        JRadioButton maleButton = new JRadioButton("MALE"); //creatinga radio buton for the female gender
         ButtonGroup genderGroup = new ButtonGroup(); //creating a button group to group the radiobuttons
         genderGroup.add(maleButton); //adding the male radio buttons to the group
         genderGroup.add(femaleButton); //adding the female radio buttons to the group
@@ -58,14 +58,35 @@ public class Main{
         agePanel.add(dayCombo); //adding the day combo box to the panel
         agePanel.add(monthCombo); //adding the month combo box t the panel
         agePanel.add(yearCombo); //adding the year combo box to the pannel
-        frame.add(ageLabel);
-        frame.add(agePanel);
+        frame.add(ageLabel); //adding the age/dob label to thr frame with the combo boxes
+        frame.add(agePanel); //adding the panel  to the frame with the combo boxes
 
+        //Adding the address lable and text area
 
+        JLabel addressLabel = new JLabel("Address"); //creating a label for the address field
+        JTextArea addressArea = new JTextArea(); //creating a text area for user to input their address
+        addressArea.setRows(4); //setting the number of rows here 
+        frame.add(addressLabel); //adding the address label to the frame
+        frame.add(addressArea); //adding the text area to the frame
 
+        //Terms and conditions check box
+        JCheckBox termsCheck = new JCheckBox("Accept Terms and Conditions. "); //we have created a checkbox with the terms and conditions
+        frame.add(termsCheck); //Adding of the checkbox to the frame
+        frame.add(new JLabel("")); //Adding of an empty label to have proper spacing and alignmemt
 
-        
-        
+        //SUbmit and the Reset Buttons Implementations
+        JPanel buttonPanel = new JPanel (new FlowLayout()); //CREATING A NEW FLOWLAYOUT BUTTON TO HOLD THE SUBMIT AND RESET BUTTONS
+        JButton submitButton = new JButton("Submit"); //now we create a submit button
+        JButton resetButton = new JButton("Reset"); //now we create a rest button
+        buttonPanel.add(submitButton); //we will add the submit button to the panel
+        buttonPanel.add(resetButton); //we will add the reset button to the panel
+        frame.add(buttonPanel); //we will then add the whole panel to the frame 
+
+        //To create some alignment we will ad an aempty label 
+        frame.add(new JLabel(""));
+
+        //To wind up we will set the whole frame visibility to true so as it can apear on the screen
+        frame.setVisible(true);
         
     }
 }
