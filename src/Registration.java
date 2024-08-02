@@ -96,6 +96,12 @@ public class Registration extends JFrame {
                 String address = addressField.getText();
                 String contact = contactField.getText();
 
+                 // Checking if compulsory fields are filled
+        if (id.isEmpty() || name.isEmpty() || address.isEmpty() || contact.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill in all compulsory fields.");
+            return;
+        }
+
                 // Adding the retrieved data as a new row in the table
                 tableModel.addRow(new Object[]{id, name, gender, address, contact});
 
