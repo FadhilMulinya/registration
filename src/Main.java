@@ -1,3 +1,12 @@
+/**
+ * This class represents a simple graphical user interface (GUI) for a registration form.
+ * It includes fields for name, mobile number, gender, date of birth, address, and terms and conditions.
+ * The form also includes submit and reset buttons.
+ *
+ * @author Fadhil
+ * @version 1.0
+ */
+
 //we will import swing components for GUI they are like JFrame,JPanel,JButtons,JTextField built on to of AWT
 import javax.swing.*;
 //importing awt components for the management of layout they include stafff like frame,grid,oanel,textfield etc.
@@ -5,6 +14,11 @@ import java.awt.*;
 
 //initialize with the class 
 public class Main{
+     /**
+     * The main method creates and displays the registration form GUI.
+     *
+     * @param args Command-line arguments (not used)
+     */
     public static void main(){
         //we will start with creating the main frame window with title 
         JFrame frame = new JFrame("Registration form");
